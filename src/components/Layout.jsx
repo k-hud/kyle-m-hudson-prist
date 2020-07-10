@@ -31,46 +31,8 @@ const LayoutContainer = styled.div`
     }
 `;
 
-// const Layout = ({ children }) => (
-//     <StaticQuery
-//         query={graphql`
-//             query SiteTitleQuery {
-//                 site {
-//                     siteMetadata {
-//                         title
-//                     }
-//                 }
-//             }
-//         `}
-//         render={data => (
-//             <LayoutContainer className="div">
-//                 <Global styles={[globalStyles, typeStyles]} />
-//                 <div className="Layout">
-//                     <Header />
-//                     <main className="Layout__content">
-//                         {children}
-//                     </main>
-//                     <Footer />
-//                 </div>
-//             </LayoutContainer>
-//         )}
-//     />
-// )
-
-const Layout = ({ children }) => (
-    <LayoutContainer className="div">
-                <Global styles={[globalStyles, typeStyles]} />
-                <div className="Layout">
-                    <Header />
-                    <main className="Layout__content">
-                        {children}
-                    </main>
-                    <Footer />
-                </div>
-            </LayoutContainer>
-)
-    
-export const query = graphql`
+const Layout = ({ children }) => {
+    const data = StaticQuery(graphql`
         query SiteTitleQuery {
             site {
                 siteMetadata {
@@ -78,7 +40,20 @@ export const query = graphql`
                 }
             }
         }
-    `
+    `)
+        return (
+          <LayoutContainer className="div">
+            <Global styles={[globalStyles, typeStyles]}/>
+            <div className="Layout">
+              <Header/>
+              <main className="Layout__content">
+                {children}
+              </main>
+              <Footer/>
+            </div>
+          </LayoutContainer>
+        )
+    }
 
 Layout.propTypes = {
     children: PropTypes.node.isRequired,
