@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 import styled from "@emotion/styled";
 import { Global } from "@emotion/core";
 import globalStyles from 'styles/global';
@@ -79,8 +79,10 @@ export const query = graphql`
             }
         }
     `
+
 Layout.propTypes = {
     children: PropTypes.node.isRequired,
 }
 
 export default Layout;
+
