@@ -8,7 +8,8 @@ import PropTypes from "prop-types";
 
 const ProjectCardContainer = styled(Link)`
     display: grid;
-    grid-template-columns: 4fr 7fr;
+    grid-template-columns: 3.2fr 6.1fr;
+    grid-template-rows: 2em;
     box-shadow: 0px 9px 24px rgba(0, 0, 0, 0.06);
     margin-bottom: 4em;
     transition: all 150ms ease-in-out;
@@ -56,7 +57,7 @@ const ProjectCardContainer = styled(Link)`
 
 const ProjectCardContent = styled("div")`
     background: white;
-    padding: 4em 3em 2.25em 3em;
+    padding: 2.25em 3em 2.25em 3em;
     position: relative;
 
     &:before {
@@ -94,7 +95,7 @@ const ProjectCardTitle = styled("h3")`
 const ProjectCardBlurb = styled("div")`
     margin-bottom: 0.5em;
     margin-top: 0.5em;
-    margin-bottom: 5em;
+    margin-bottom: 3.5em;
 
     @media(max-width:${dimensions.maxwidthTablet}px) {
         margin-bottom: 2.5em;
@@ -119,14 +120,14 @@ const ProjectCardImageContainer = styled("div")`
     background: ${colors.grey200};
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    ${'' /* align-items: flex-end; */}
     overflow: hidden;
     position: relative;
-    padding-left: 2em;
-    padding-right: 2em;
+    ${'' /* padding-left: 2em;
+    padding-right: 2em; */}
 
     @media(max-width:${dimensions.maxwidthTablet}px) {
-        padding-top: 3em;
+        ${'' /* padding-top: 3em; */}
         max-height: 200px;
         flex-direction: column;
         align-items: center;
