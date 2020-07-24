@@ -6,8 +6,8 @@ import dimensions from "styles/dimensions";
 import Logo from "components/_ui/Logo";
 
 const HeaderContainer = styled("div")`
-    padding-top: 3.75em;
-    padding-bottom: 3em;
+    padding-top: 2em;
+    padding-bottom: 2em;
 `
 
 const HeaderContent = styled("div")`
