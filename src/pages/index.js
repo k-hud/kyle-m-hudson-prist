@@ -12,17 +12,18 @@ import Layout from "components/Layout";
 import ProjectCard from "components/ProjectCard";
 
 const Hero = styled("div")`
-    padding-top: 2.5em;
+    padding-top: 0em;
     padding-bottom: 3em;
     margin-bottom: 6em;
-    max-width: 830px;
+    max-width: 1000px;
 
     @media(max-width:${dimensions.maxwidthMobile}px) {
        margin-bottom: 3em;
     }
 
     h1 {
-        margin-bottom: 1em;
+        margin-bottom: .5em;
+        line-height: 1.1em;
 
         a {
             text-decoration: none;
